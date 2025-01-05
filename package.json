@@ -1,0 +1,57 @@
+{
+  "name": "draw-lab-js",
+  "version": "1.0.0",
+  "description": "Turn simple strokes into powerful visuals.",
+  "main": "dist/draw-lab-js.cjs.js",
+  "module": "dist/draw-lab-js.es.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanju9645/draw-lab-js.git"
+  },
+  "author": "Osprey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanju9645/draw-lab-js/issues"
+  },
+  "homepage": "https://github.com/sanju9645/draw-lab-js#readme",
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "rollup-plugin-dts": "^6.1.1",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7"
+  },
+  "dependencies": {
+    "fabric": "^6.5.4"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/draw-lab-js.cjs.js",
+      "require": "./dist/draw-lab-js.cjs.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "keywords": [
+    "vite",
+    "typescript",
+    "package",
+    "draw-lab-js",
+    "fabric",
+    "canvas",
+    "svg",
+    "javascript",
+    "draw"
+  ]
+}

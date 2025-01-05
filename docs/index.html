@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>draw-lab-js</title>
+  </head>
+  <body>
+    <script type="module">
+      import { DrawLab } from '../dist/draw-lab-js.es.js';
+    </script>
+
+    <h1>draw-lab-js</h1>
+    <div id="container-1">
+      <div id="draw-lab-js-container-1" style="width: 90%; height: 90%; margin: 10px;"></div>
+    </div>
+    <div id="container-2">
+      <div id="draw-lab-js-container-2" style="width: 90%; height: 90%; margin: 10px;"></div>
+    </div>
+
+    <script type="module">
+      const doodleChart = new DoodleChart();
+      const toolBoxContainer = doodleChart.createToolBoxContainer("draw-lab-js-container-1");
+      const toolboxWrapper = document.createElement('div');
+      toolboxWrapper.className = 'toolbox-wrapper';
+      toolboxWrapper.appendChild(toolBoxContainer);
+
+      const containerWrapperDiv1 = document.getElementById("container-1");
+      containerWrapperDiv1.appendChild(toolboxWrapper);
+      doodleChart.setupDrawingContext(containerWrapperDiv1, "draw-lab-js-container-1");
+    </script>
+  </body>
+</html>
